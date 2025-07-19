@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { RetroNavigation } from "@/components/RetroNavigation";
+import { RetroHero } from "@/components/RetroHero";
+import { ProjectsGrid } from "@/components/ProjectsGrid";
+import { TerminalAbout } from "@/components/TerminalAbout";
+import { RetroFooter } from "@/components/RetroFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <RetroNavigation />
+      
+      <main>
+        <section id="home">
+          <RetroHero />
+        </section>
+        
+        <section id="projects">
+          <ProjectsGrid />
+        </section>
+        
+        <section id="about">
+          <TerminalAbout />
+        </section>
+      </main>
+      
+      <RetroFooter />
     </div>
   );
 };
